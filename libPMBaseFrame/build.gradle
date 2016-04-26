@@ -1,0 +1,87 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+    dexOptions {
+        preDexLibraries = false
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+//    compile project(":libMDDialog")
+
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+
+    //工具类集合
+    compile 'com.github.lazylibrary:lazylibrary:1.0.2' //https://github.com/l123456789jy/Lazy
+
+    //分包打包
+    compile 'com.android.support:multidex:1.0.1'
+
+    //控件注入
+    compile 'com.jakewharton:butterknife:7.0.1' //https://github.com/JakeWharton/butterknife
+
+    //图片下载
+    compile 'com.github.bumptech.glide:glide:3.7.0' //https://github.com/bumptech/glide
+
+    //网络访问
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta3' //https://github.com/square/retrofit
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta3'
+    compile 'com.squareup.okio:okio:1.5.0'
+
+    compile 'io.reactivex:rxandroid:1.1.0' //https://github.com/ReactiveX/RxAndroid
+    compile 'io.reactivex:rxjava:1.1.0'
+
+    compile 'com.google.code.gson:gson:2.6.1' //https://github.com/google/gson
+
+    compile 'org.greenrobot:eventbus:3.0.0' //https://github.com/greenrobot/EventBus
+
+    //MD 控件
+    compile 'com.android.support:recyclerview-v7:23.2.0'
+    compile 'com.android.support:design:23.2.0'
+    compile 'com.android.support:cardview-v7:23.2.0'
+    compile 'com.android.support:design:23.2.0'
+//    compile 'com.github.gabrielemariotti.recyclerview:recyclerview-animators:0.3.0-SNAPSHOT@aar' //https://github.com/gabrielemariotti/RecyclerViewItemAnimators
+//    compile 'com.github.rey5137:material:1.2.2' //https://github.com/rey5137/material
+//    compile 'com.bartoszlipinski.recyclerviewheader:library:1.2.1' //https://github.com/blipinsk/RecyclerViewHeader
+    compile 'com.bigkoo:convenientbanner:2.0.5' //https://github.com/saiwu-bigkoo/Android-ConvenientBanner
+
+    //sqlite工具
+    compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+
+    //Android内存泄露检测工具
+    compile 'com.squareup.leakcanary:leakcanary-android:1.3.1'
+
+
+
+    //avoscloud-sdk 为 LeanCloud基础包
+    compile ('cn.leancloud.android:avoscloud-sdk:v3.+')
+    //avoscloud-push 为推送与实时聊天需要的包
+    compile ('cn.leancloud.android:avoscloud-push:v3.+@aar'){transitive = true}
+    //avoscloud-statistics 为 LeanCloud 统计包
+    compile ('cn.leancloud.android:avoscloud-statistics:v3.+')
+
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        app:itemTextColor="@color/md_grey_900">
+        <item
+            android:id="@+id/menu_home"
+            android:checkable="true"
+            android:icon="@drawable/cricle"
+            android:title="首页"
+            app:itemTextColor="@color/md_grey_900"
+            />
+        <item
+            android:id="@+id/menu_page2"
+            android:checkable="true"
+            android:icon="@drawable/cricle"
+            android:title="商家"/>
+        <item
+            android:id="@+id/menu_page3"
+            android:checkable="true"
+            android:icon="@drawable/cricle"
+            android:title="地图"/>
+        <item
+            android:id="@+id/menu_page4"
+            android:checkable="true"
+            android:icon="@drawable/cricle"
+            android:title="预约"/>
+        <item
+            android:id="@+id/menu_page5"
+            android:checkable="true"
+            android:icon="@drawable/cricle"
+            android:title="我的"/>
+    </group>
+    <group android:id="@+id/my_id">
+        <item
+            android:id="@+id/menu_tag"
+            android:checkable="true"
+            android:icon="@drawable/ic_tag"
+            android:title="更多"/>
+        <item
+            android:id="@+id/menu_collect1"
+            android:checkable="true"
+            android:icon="@drawable/menu_collect"
+            android:title="设置"/>
+    </group>
+
+</menu>

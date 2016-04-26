@@ -1,0 +1,93 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pmavio.pmbaseframe.test">
+	<!--测试提交-->
+    <!--应用权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+
+    <!--发布渠道-->
+    <meta-data android:name="Channel ID" android:value="Original"/>
+
+    <!--Glide配置-->
+    <meta-data
+        android:name="com.strongit.framedemo.global.MyGlideModule"
+        android:value="GlideModule" />
+
+    <application android:allowBackup="true" android:label="@string/app_name"
+        android:name="com.strongit.framedemo.TTApplication"
+        android:icon="@mipmap/ic_launcher" android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.strongit.framedemo.ui.user.LoginActivity"/>
+        <activity android:name="com.strongit.framedemo.ui.user.PhoneNumVerifyActivity"/>
+
+        <!--Bugtags Start
+        <activity
+            android:name="com.bugtags.library.BugtagsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <receiver
+            android:name="com.bugtags.library.BugtagsReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.bugtags.library.BugtagsService"/>
+        Bugtags End-->
+
+        <!--ShareSDK Start-->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+
+            <intent-filter>
+                <data android:scheme="tencent1105234859" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--微信分享回调 -->
+        <activity
+            android:name="com.strongit.framedemo.wxapi.WXEntryActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <!--ShareSDK End-->
+
+        <!--LeanCloud Start-->
+        <!-- 实时通信模块、推送（若使用该功能，需添加以下声明）START -->
+        <service android:name="com.avos.avoscloud.PushService"/>
+        <receiver android:name="com.avos.avoscloud.AVBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+        <!-- 实时通信模块、推送 END -->
+        <!--LeanCloud End-->
+    </application>
+
+</manifest>

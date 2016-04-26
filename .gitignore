@@ -1,0 +1,32 @@
+# 编译后的安装包
+*.apk
+*.ap_
+
+# dex VM(可执行的虚拟机文件)
+*.dex
+
+# 编译后的java文件
+*.class
+
+# 编译时生成的文件
+/bin
+/gen
+
+# 本地sdk以及其它配置文件
+local.properties
+
+# Eclipse工程配置文件
+.classpath
+.project
+
+# Eclipse混淆生成的文件
+/proguard
+
+# Intellij/Android studio的配置文件
+*.iml
+*.ipr
+*.iws
+/.idea
+/.gradle
+/build
+/.idea

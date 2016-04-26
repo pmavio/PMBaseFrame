@@ -1,0 +1,34 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/app_primary_color</item>
+        <item name="colorPrimaryDark">@color/app_primary_color_dark</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+    </style>
+
+    <style name="PopupMenu" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/app_color_background</item>
+        <item name="android:textColor">@color/app_primary_color_dark</item>
+    </style>
+
+    <style name="bt_main_color" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@drawable/bt_bg_normal</item>
+        <item name="android:layout_margin">@dimen/widgets_space_normal</item>
+    </style>
+
+    <style name="tv_clickable_transparent" parent="Widget.AppCompat.TextView.SpinnerItem">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/md_grey_700</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/widgets_space_large</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/tv_clickable_normal</item>
+    </style>
+
+    <style name="tb_title" parent="Widget.AppCompat.Toolbar">
+    </style>
+</resources>

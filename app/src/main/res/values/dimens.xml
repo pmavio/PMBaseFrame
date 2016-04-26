@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="corner_normal">2dp</dimen>  <!--控件圆角半径-普通-->
+    <dimen name="widgets_space_normal">2dp</dimen> <!--控件间间隙-普通-->
+    <dimen name="widgets_space_large">5dp</dimen> <!--控件间间隙-大-->
+    <dimen name="rows_space_normal">10dp</dimen> <!--控件组之间的间隙-普通-->
+    <dimen name="border_space_normal">15dp</dimen> <!--距离屏幕边界的间隙-普通-->
+</resources>
